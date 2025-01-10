@@ -1,13 +1,16 @@
 /* 
+
 A linker script is a file which defines the memory layout of executable files. 
 Based on the layout, the linker assigns memory addresses to functions and variables.
-The entry point of the kernel is the boot function 
+
+추가적인 자료 - http://korea.gnu.org/manual/release/ld/ld-sjp/ld-ko_3.html
+
 */
 
 ENTRY(boot)
 
 SECTIONS {
-    . = 0x80200000;
+    . = 0x80200000; 
     __kernel_base = .;
 
     .text :{
