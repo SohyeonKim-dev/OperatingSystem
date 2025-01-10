@@ -2,7 +2,7 @@
        0        0 80200000     1 . = 0x80200000
 80200000        0        0     1 __kernel_base = .
 80200000 80200000     1480     4 .text
-80200000 80200000        e     2         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-11b9cc.o:(.text.boot)
+80200000 80200000        e     2         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-1b5ebd.o:(.text.boot)
 80200000 80200000        0     1                 .L0 
 80200000 80200000        0     1                 .L0 
 80200000 80200000        0     1                 $x
@@ -10,7 +10,7 @@
 80200000 80200000        e     1                 boot
 8020000e 8020000e        0     1                 .L0 
 8020000e 8020000e        0     1                 .L0 
-80200010 80200010     1236     4         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-11b9cc.o:(.text)
+80200010 80200010     1236     4         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-1b5ebd.o:(.text)
 80200010 80200010        0     1                 .L0 
 80200010 80200010        0     1                 .L0 
 80200010 80200010        0     1                 $x
@@ -1260,7 +1260,7 @@
 80201244 80201244        0     1                 .L0 
 80201246 80201246        0     1                 .L0 
 80201246 80201246        0     1                 .L0 
-80201246 80201246      23a     2         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-2f9535.o:(.text)
+80201246 80201246      23a     2         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-6d17c2.o:(.text)
 80201246 80201246        0     1                 .L0 
 80201246 80201246        0     1                 .L0 
 80201246 80201246        0     1                 $x
@@ -1489,12 +1489,12 @@
 8020176c 8020176c        0     1                 _binary_shell_bin_start
 80211bac 80211bac        0     1                 _binary_shell_bin_end
 80211bac 80211bac        4     4 .sdata
-80211bac 80211bac        4     4         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-11b9cc.o:(.sdata)
+80211bac 80211bac        4     4         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-1b5ebd.o:(.sdata)
 80211bac 80211bac        4     1                 alloc_pages.next_paddr
 80211bac 80211bac        0     1                 $d
 80211bb0 80211bb0    11370     4 .bss
 80211bb0 80211bb0        0     1         __bss = .
-80211bb0 80211bb0       18     4         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-11b9cc.o:(.sbss)
+80211bb0 80211bb0       18     4         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-1b5ebd.o:(.sbss)
 80211bb0 80211bb0        0     1                 $d
 80211bb0 80211bb0        4     1                 blk_request_vq
 80211bb4 80211bb4        4     1                 blk_capacity
@@ -1502,7 +1502,7 @@
 80211bbc 80211bbc        4     1                 blk_req
 80211bc0 80211bc0        4     1                 idle_proc
 80211bc4 80211bc4        4     1                 current_proc
-80211bc8 80211bc8    11358     4         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-11b9cc.o:(.bss)
+80211bc8 80211bc8    11358     4         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-1b5ebd.o:(.bss)
 80211bc8 80211bc8        0     1                 $d
 80211bc8 80211bc8      a00     1                 disk
 802125c8 802125c8      8d8     1                 files
@@ -1516,43 +1516,43 @@
 80243000 80243000  4000000     1 . += 64 * 1024 * 1024
 84243000 84243000        0     1 __free_ram_end = .
        0        0      dad     1 .debug_loclists
-       0        0      c08     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-11b9cc.o:(.debug_loclists)
+       0        0      c08     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-1b5ebd.o:(.debug_loclists)
        0        0        0     1                 $d
        c        c        0     1                 .L0 
-     c08      c08      1a5     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-2f9535.o:(.debug_loclists)
+     c08      c08      1a5     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-6d17c2.o:(.debug_loclists)
      c08      c08        0     1                 $d
      c14      c14        0     1                 .L0 
        0        0      463     1 .debug_abbrev
-       0        0      336     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-11b9cc.o:(.debug_abbrev)
+       0        0      336     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-1b5ebd.o:(.debug_abbrev)
        0        0        0     1                 $d
-     336      336      12d     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-2f9535.o:(.debug_abbrev)
+     336      336      12d     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-6d17c2.o:(.debug_abbrev)
      336      336        0     1                 $d
        0        0     18bc     1 .debug_info
-       0        0     1687     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-11b9cc.o:(.debug_info)
+       0        0     1687     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-1b5ebd.o:(.debug_info)
        0        0        0     1                 $d
-    1687     1687      235     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-2f9535.o:(.debug_info)
+    1687     1687      235     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-6d17c2.o:(.debug_info)
     1687     1687        0     1                 $d
        0        0      136     1 .debug_rnglists
-       0        0      11b     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-11b9cc.o:(.debug_rnglists)
+       0        0      11b     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-1b5ebd.o:(.debug_rnglists)
        0        0        0     1                 $d
        c        c        0     1                 .L0 
-     11b      11b       1b     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-2f9535.o:(.debug_rnglists)
+     11b      11b       1b     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-6d17c2.o:(.debug_rnglists)
      11b      11b        0     1                 $d
      127      127        0     1                 .L0 
        0        0      390     1 .debug_str_offsets
-       0        0      2fc     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-11b9cc.o:(.debug_str_offsets)
+       0        0      2fc     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-1b5ebd.o:(.debug_str_offsets)
        0        0        0     1                 $d
        8        8        0     1                 .L0 
-     2fc      2fc       94     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-2f9535.o:(.debug_str_offsets)
+     2fc      2fc       94     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-6d17c2.o:(.debug_str_offsets)
      2fc      2fc        0     1                 $d
      304      304        0     1                 .L0 
-       0        0      5ff     1 .debug_str
-       0        0      5ff     1         <internal>:(.debug_str)
+       0        0      60c     1 .debug_str
+       0        0      60c     1         <internal>:(.debug_str)
        0        0      340     1 .debug_addr
-       0        0      2e0     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-11b9cc.o:(.debug_addr)
+       0        0      2e0     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-1b5ebd.o:(.debug_addr)
        0        0        0     1                 $d
        8        8        0     1                 .L0 
-     2e0      2e0       60     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-2f9535.o:(.debug_addr)
+     2e0      2e0       60     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-6d17c2.o:(.debug_addr)
      2e0      2e0        0     1                 $d
      2e8      2e8        0     1                 .L0 
        0        0       3b     1 .comment
@@ -1560,21 +1560,21 @@
        0        0       34     1 .riscv.attributes
        0        0       34     1         <internal>:(.riscv.attributes)
        0        0      31c     4 .debug_frame
-       0        0      298     4         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-11b9cc.o:(.debug_frame)
+       0        0      298     4         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-1b5ebd.o:(.debug_frame)
        0        0        0     1                 .L0 
        0        0        0     1                 $d
-     298      298       84     4         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-2f9535.o:(.debug_frame)
+     298      298       84     4         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-6d17c2.o:(.debug_frame)
      298      298        0     1                 .L0 
      298      298        0     1                 $d
        0        0     19ca     1 .debug_line
-       0        0     15f4     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-11b9cc.o:(.debug_line)
+       0        0     15f4     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/kernel-1b5ebd.o:(.debug_line)
        0        0        0     1                 .Lline_table_start0
        0        0        0     1                 $d
-    15f4     15f4      3d6     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-2f9535.o:(.debug_line)
+    15f4     15f4      3d6     1         /var/folders/4h/4r9wntq10l75vq5j2s935ycc0000gq/T/common-6d17c2.o:(.debug_line)
     15f4     15f4        0     1                 .Lline_table_start0
     15f4     15f4        0     1                 $d
-       0        0       43     1 .debug_line_str
-       0        0       43     1         <internal>:(.debug_line_str)
+       0        0       50     1 .debug_line_str
+       0        0       50     1         <internal>:(.debug_line_str)
        0        0      560     4 .symtab
        0        0      560     4         <internal>:(.symtab)
        0        0       e3     1 .shstrtab
