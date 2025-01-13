@@ -7,6 +7,21 @@ Based on the layout, the linker assigns memory addresses to functions and variab
 
 */
 
+/* 
+
+- boot 함수가 커널의 진입점이다! 
+- The base address == 0x80200000.
+- The .text.boot section is always placed at the beginning.
+- Each section is placed in the order of .text, .rodata, .data, and .bss.
+- The kernel stack comes after the .bss section, and its size is 128KB.
+
+- ENTRY(boot) declares that the boot function is the entry point of the program. 
+- the placement of each section is defined within the SECTIONS block.
+
+- The . symbol represents the current address
+
+*/
+
 ENTRY(boot)
 
 SECTIONS {
