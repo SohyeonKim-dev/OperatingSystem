@@ -36,20 +36,23 @@ int strcmp(const char *s1, const char *s2) {
 
 void putchar(char ch);
 
+// printf 함수를 정의하는 부분 ! 
 void printf(const char *fmt, ...) {
     va_list vargs;
     va_start(vargs, fmt);
+
     while (*fmt) {
         if (*fmt == '%') {
-            fmt++;
-            switch (*fmt) {
-                case '\0':
+            fmt++; // Skip '%'
+            switch (*fmt) { // Read the next character
+                case '\0': // '%' at the end of the format string
                     putchar('%');
                     goto end;
-                case '%':
+                case '%': // Print '%'
                     putchar('%');
                     break;
-                case 's': {
+
+                case 's': { // Print a NULL-terminated string.
                     const char *s = va_arg(vargs, const char *);
                     while (*s) {
                         putchar(*s);
@@ -57,7 +60,7 @@ void printf(const char *fmt, ...) {
                     }
                     break;
                 }
-                case 'd': {
+                case 'd': { // Print an integer in decimal.
                     int value = va_arg(vargs, int);
                     if (value < 0) {
                         putchar('-');
@@ -76,7 +79,7 @@ void printf(const char *fmt, ...) {
 
                     break;
                 }
-                case 'x': {
+                case 'x': { // Print an integer in hexadecimal. -> 16진수 
                     int value = va_arg(vargs, int);
                     for (int i = 7; i >= 0; i--) {
                         int nibble = (value >> (i * 4)) & 0xf;
@@ -87,7 +90,6 @@ void printf(const char *fmt, ...) {
         } else {
             putchar(*fmt);
         }
-
         fmt++;
     }
 

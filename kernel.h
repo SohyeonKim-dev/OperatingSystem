@@ -50,6 +50,7 @@ struct process {
     uint8_t stack[8192]; // kernel stack
 };
 
+// define the return value structure
 struct sbiret {
     long error;
     long value;
