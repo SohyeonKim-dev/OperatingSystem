@@ -1,5 +1,14 @@
 #include "common.h"
 
+/*
+
+Chap6. C Standard Library
+
+Memory operations - implement the memory operation functions
+
+*/
+
+// Fills the first n bytes of buf with c
 void *memset(void *buf, char c, size_t n) {
     uint8_t *p = (uint8_t *) buf;
     while (n--)
@@ -7,6 +16,7 @@ void *memset(void *buf, char c, size_t n) {
     return buf;
 }
 
+// Copies n bytes from src to dst:
 void *memcpy(void *dst, const void *src, size_t n) {
     uint8_t *d = (uint8_t *) dst;
     const uint8_t *s = (const uint8_t *) src;
@@ -15,6 +25,7 @@ void *memcpy(void *dst, const void *src, size_t n) {
     return dst;
 }
 
+// Copies the string from src to dst:
 char *strcpy(char *dst, const char *src) {
     char *d = dst;
     while (*src)
