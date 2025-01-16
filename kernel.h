@@ -172,6 +172,16 @@ struct file {
         __asm__ __volatile__("csrw " #reg ", %0" ::"r"(__tmp));                \
     } while (0)
 
+/*
+
+Chap7. Kernel Panic 
+- kernel panic occurs when the kernel encounters an unrecoverable error 
+
+- 패닉 함수를 구현하는 idioms 에 대하여 
+- 출처: https://operating-system-in-1000-lines.vercel.app/en/07-kernel-panic
+
+*/
+
 #define PANIC(fmt, ...)                                                        \
     do {                                                                       \
         printf("PANIC: %s:%d: " fmt "\n", __FILE__, __LINE__, ##__VA_ARGS__);  \

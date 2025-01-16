@@ -563,11 +563,15 @@ void handle_trap(struct trap_frame *f) {
 }
 
 void kernel_main(void) {
-    printf("\n\nHello %s\n", "World!");
-    printf("1 + 2 = %d, %x\n", 1 + 2, 0x1234abcd);
+    // printf("\n\nHello %s\n", "World!");
+    // printf("1 + 2 = %d, %x\n", 1 + 2, 0x1234abcd);
 
     memset(__bss, 0, (size_t) __bss_end - (size_t) __bss);
     printf("\n\n");
+    
+    // PANIC("booted!");
+    // printf("unreachable here!\n");
+
     WRITE_CSR(stvec, (uint32_t) kernel_entry);
     virtio_blk_init();
     fs_init();
