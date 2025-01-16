@@ -41,6 +41,21 @@ void map_page(uint32_t *table1, uint32_t vaddr, paddr_t paddr, uint32_t flags) {
     table0[vpn0] = ((paddr / PAGE_SIZE) << 10) | flags | PAGE_V;
 }
 
+/*
+
+- ECALL is used as the control transfer instruction between the supervisor and the SEE.
+- All registers except a0 & a1 must be preserved across an SBI call by the callee.
+
+- "All registers except a0 & a1 must be preserved across an SBI call by the callee" 
+means that the callee (OpenSBI side) must not change the values of except a0 and a1. 
+In other words, from the kernel's perspective, it is guaranteed that 
+the registers (a2 to a7) will remain the same after the call.
+
+- That is, by calling Console Putchar function is not a magic at all 
+- it just uses the device driver implemented in OpenSBI!
+
+*/
+
 struct sbiret sbi_call(long arg0, long arg1, long arg2, long arg3, long arg4,
                        long arg5, long fid, long eid) {
     register long a0 __asm__("a0") = arg0;
