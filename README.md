@@ -1,4 +1,4 @@
-# 운영체제 만들기 프로젝트 
+# OS 개발 프로젝트 
 
 ### File Structure
 ```
@@ -16,4 +16,6 @@
 └── run.sh    - Build script
 
 ```
+
 ##### 참고자료: https://operating-system-in-1000-lines.vercel.app/en/  
+##### Blog: https://sohyeonkim-dev.tistory.com/category/ComputerScience/OperatingSystem
