@@ -11,6 +11,23 @@ struct process procs[PROCS_MAX];
 struct process *current_proc;
 struct process *idle_proc;
 
+/*
+
+alloc_pages
+
+dynamically allocates n pages of memory and returns the starting address
+next_paddr is defined as a static variable. 
+This means, unlike local variables, its value is retained between function calls. 
+That is, it behaves like a global variable.
+
+__free_ram is placed on a 4KB boundary due to ALIGN(4096) in the linker script. 
+Therefore, the alloc_pages function always returns an address aligned to 4KB.
+
+If it tries to allocate beyond __free_ram_end, 
+in other words, if it runs out of memory, a kernel panic occurs.
+
+*/
+
 paddr_t alloc_pages(uint32_t n) {
     static paddr_t next_paddr = (paddr_t) __free_ram;
     paddr_t paddr = next_paddr;
@@ -566,18 +583,14 @@ void handle_trap(struct trap_frame *f) {
 }
 
 void kernel_main(void) {
-    // printf("\n\nHello %s\n", "World!");
-    // printf("1 + 2 = %d, %x\n", 1 + 2, 0x1234abcd);
-
     memset(__bss, 0, (size_t) __bss_end - (size_t) __bss);
     printf("\n\n");
-    
-    // PANIC("booted!");
-    // printf("unreachable here!\n");
-    
-    // Chap8. Exception 
-    // WRITE_CSR(stvec, (uint32_t) kernel_entry); // new
-    // __asm__ __volatile__("unimp"); // new
+
+    // Chap9. Memory Allocation 
+    paddr_t paddr0 = alloc_pages(2);
+    paddr_t paddr1 = alloc_pages(1);
+    printf("alloc_pages test: paddr0=%x\n", paddr0);
+    printf("alloc_pages test: paddr1=%x\n", paddr1);
 
     WRITE_CSR(stvec, (uint32_t) kernel_entry);
     virtio_blk_init();

@@ -51,6 +51,12 @@ SECTIONS {
     . += 128 * 1024; /* 128KB */
     __stack_top = .;
 
+    /*
+    chap9. Memory Allocation
+    - define the memory regions to be managed by the allocator
+    - . = ALIGN(4096) ensures that it's aligned to a 4KB boundary
+    */
+
     . = ALIGN(4096);
     __free_ram = .;
     . += 64 * 1024 * 1024; /* 64MB */
