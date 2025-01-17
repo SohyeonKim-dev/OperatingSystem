@@ -285,6 +285,9 @@ long getchar(void) {
 
 __attribute__((naked))
 __attribute__((aligned(4)))
+
+// Life of an exception
+
 void kernel_entry(void) {
     __asm__ __volatile__(
         "csrrw sp, sscratch, sp\n"
@@ -571,6 +574,10 @@ void kernel_main(void) {
     
     // PANIC("booted!");
     // printf("unreachable here!\n");
+    
+    // Chap8. Exception 
+    // WRITE_CSR(stvec, (uint32_t) kernel_entry); // new
+    // __asm__ __volatile__("unimp"); // new
 
     WRITE_CSR(stvec, (uint32_t) kernel_entry);
     virtio_blk_init();
